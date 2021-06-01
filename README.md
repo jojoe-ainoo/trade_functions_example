@@ -1,2 +1,2 @@
-# trade_functions_example
+# Trade Functions Example
 Demonstration of Trade functions example
