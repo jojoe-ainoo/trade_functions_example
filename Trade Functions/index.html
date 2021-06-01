@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Trade Functions</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+	<script src="js/tradeFunctions.js" defer></script>
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					MANAGE ACCOUNT
+				</span>
+
+				<p class="wrap-input100 label-input100">Company Balances: </p>
+				<div class="wrap-input100 bg1 rs1-wrap-input100" ">
+					<span class="label-input100">USD</span>
+					<p class="input100" id="cmp-usd" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="email" placeholder="Enter Your Email "> -->
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">GHS</span>
+					<p class="input100" id="cmp-ghs" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="phone" placeholder="Enter Number Phone"> -->
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">GBP</span>
+					<p class="input100" id="cmp-gbp" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="phone" placeholder="Enter Number Phone"> -->
+				</div>
+
+				<p class="wrap-input100 label-input100">Client Balances: </p>
+				<div class="wrap-input100 bg1 rs1-wrap-input100" ">
+					<span class="label-input100">USD</span>
+					<p class="input100" id="clt-usd" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="email" placeholder="Enter Your Email "> -->
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">GHS</span>
+					<p class="input100" id="clt-ghs" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="phone" placeholder="Enter Number Phone"> -->
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">GBP</span>
+					<p class="input100" id="clt-gbp" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="phone" placeholder="Enter Number Phone"> -->
+				</div>
+
+				<br />
+				<br />
+				<h1 class="label-input100" style="text-align: center;"> 
+					Deposit / Withdraw with Account
+				</h1>
+				<br />
+				<div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Select Currency: </span>
+					<div>
+						<select id="ac_select" class="js-select2" name="service">
+							<option></option>
+							<option value="USD">USD</option>
+							<option value="GHS">GHS</option>
+							<option value="GBP">GBP</option>
+						</select>
+						<div class=" dropDownSelect2"></div>
+					</div>
+				</div>
+
+
+			
+				
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Quote Amount</span>
+					<input id="ac_amount" class="input100" type="number" name="number" placeholder="Enter Amount ">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter an amount">
+					<button id="btnDeposit" class="contact100-form-btn">Deposit</button>
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter an amount">
+					<button id="btnWithdraw" class="contact100-form-btn">Withdraw</button>
+				</div>
+
+				<br/>
+				<span class="contact100-form-title" style="padding-top: 20%;">
+					TRADE - BUY/SELL
+				</span>
+
+
+				<p class="wrap-input100 label-input100">Sold/Bought Balances: </p>
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">USD</span>
+					<p class="input100" id="bs-usd" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="email" placeholder="Enter Your Email "> -->
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">GHS</span>
+					<p class="input100" id="bs-ghs" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="phone" placeholder="Enter Number Phone"> -->
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">GBP</span>
+					<p class="input100" id="bs-gbp" style="text-align: center;"></p>
+					<!-- <input class="input100" type="text" name="phone" placeholder="Enter Number Phone"> -->
+				</div>
+
+				<div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
+					<span class="label-input100">Base Currency: </span>
+					<div>
+						<select id="base_currency" class="js-select2" name="service">
+							<option></option>
+							<option value="USD">USD</option>
+							<option value="GHS">GHS</option>
+							<option value="GBP">GBP</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+
+				<div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
+					<span class="label-input100">Quote Currency: </span>
+					<div>
+						<select id="quote_currency" class="js-select2" name="service">
+							<option></option>
+							<option value="USD">USD</option>
+							<option value="GHS">GHS</option>
+							<option value="GBP">GBP</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+					<span class="label-input100">Quote Amount</span>
+					<input class="input100" id="bs-amount" type="number" name="number" placeholder="Enter Amount ">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<button id="btnBuy" class="contact100-form-btn">Buy</button>
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<button id= "btnReset" class="contact100-form-btn">Reset</button>
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100" >
+					<button id= "btnSell" class="contact100-form-btn">Sell</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+	</script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
